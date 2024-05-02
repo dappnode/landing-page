@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { FiArrowUp } from "react-icons/fi";
-import AboutUs from "./components/AboutUs";
+import About from "./components/About";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState("light");
@@ -46,7 +46,7 @@ const App: React.FC = () => {
     >
       <Navbar theme={theme} onThemeToggle={toggleTheme} />
       <main className="flex-grow">
-        <AboutUs />
+        <About />
       </main>
       <Footer />
       {showScrollTop && (

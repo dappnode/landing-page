@@ -1,5 +1,6 @@
 import React from "react";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { FaMoon } from "react-icons/fa";
+import { MdSunny } from "react-icons/md";
 
 interface NavbarProps {
   onThemeToggle: () => void;
@@ -11,7 +12,7 @@ const pages: {
   path: string;
 }[] = [
   {
-    name: "About Us",
+    name: "About",
     path: "#about",
   },
 ];
@@ -40,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, theme }) => {
         onClick={onThemeToggle}
         className="text-2xl rounded-full p-2 transition-all ease-in-out hover:bg-gray-200 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-300"
       >
-        {theme === "light" ? <FaSun /> : <FaMoon />}
+        {theme === "light" ? <FaMoon /> : <MdSunny />}
       </button>
     </nav>
   );

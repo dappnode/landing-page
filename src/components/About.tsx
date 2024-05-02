@@ -61,7 +61,7 @@ const team: {
     img: "/team/Chuy_Garcia.avif",
   },
 ];
-const AboutUs: React.FC = () => {
+const About: React.FC = () => {
   return (
     <motion.div
       id="about"
@@ -134,4 +134,4 @@ const AboutUs: React.FC = () => {
   );
 };
 
-export default AboutUs;
+export default About;
