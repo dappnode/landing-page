@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { FiArrowUp } from "react-icons/fi";
 import About from "./components/About";
+import "./App.css";
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState("light");

@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "modeg";
+  src: url("/public/modeg.ttf") format("truetype"); /* Adjust path as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "modeg", sans-serif;
+}
