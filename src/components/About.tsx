@@ -8,57 +8,57 @@ const team: {
   {
     name: "Jordi Baylina",
     role: "Founder",
-    img: "/team/Jordi_Baylina.webp",
+    img: "./team/Jordi_Baylina.webp",
   },
   {
     name: "Griff Green",
     role: "Founder",
-    img: "/team/Griff_Green.webp",
+    img: "./team/Griff_Green.webp",
   },
   {
     name: "Eduardo Antuña",
     role: "Founder and Product Lead",
-    img: "/team/Eduardo_Antuna.webp",
+    img: "./team/Eduardo_Antuna.webp",
   },
   {
     name: "Pol Bordas",
     role: "COO",
-    img: "/team/Pol_Bordas.webp",
+    img: "./team/Pol_Bordas.webp",
   },
   {
     name: "Pablo Mendez",
     role: "Product Manager",
-    img: "/team/Pablo_Mendez.webp",
+    img: "./team/Pablo_Mendez.webp",
   },
   {
     name: "Diego Simon",
     role: "Software Engineer",
-    img: "/team/Diego_Simon.avif",
+    img: "./team/Diego_Simon.avif",
   },
   {
     name: "Marc Font",
     role: "Software Engineer",
-    img: "/team/Marc_Font.avif",
+    img: "./team/Marc_Font.avif",
   },
   {
     name: "Mateu Miralles",
     role: "Fro",
-    img: "/team/Mateu_Miralles.avif",
+    img: "./team/Mateu_Miralles.avif",
   },
   {
     name: "Clara Mendez",
     role: "e-commerce & Marketing",
-    img: "/team/Clara_Mendez.webp",
+    img: "./team/Clara_Mendez.webp",
   },
   {
     name: "Patricia Zamora",
     role: "Administration & finance",
-    img: "/team/Patricia_Zamora.avif",
+    img: "./team/Patricia_Zamora.avif",
   },
   {
     name: "Chuy Garcia",
     role: "Community Manager",
-    img: "/team/Chuy_Garcia.avif",
+    img: "./team/Chuy_Garcia.avif",
   },
 ];
 const About: React.FC = () => {

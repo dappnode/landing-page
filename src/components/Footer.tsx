@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
             <img
               alt="Dappnode logo"
               height={26}
-              src="/dappnode-logo-only.png"
+              src="./dappnode-logo-only.png"
               width={26}
             />
           </a>

@@ -29,7 +29,7 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, theme }) => {
       <nav className="flex items-center justify-between border-b p-4 md:p-6 bg-dappnodeBgLightHeaderFooter dark:bg-dappnodeBgDarkHeaderFooter z-10">
         <div className="flex items-center justify-start">
           <img
-            src="/dappnode-logo-only.png"
+            src="./dappnode-logo-only.png"
             alt="Logo"
             className="h-10 md:h-12 mr-4"
           />
