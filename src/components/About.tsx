@@ -42,7 +42,7 @@ const team: {
   },
   {
     name: "Mateu Miralles",
-    role: "Fro",
+    role: "Full-Stack Developer",
     img: "./team/Mateu_Miralles.avif",
   },
   {
@@ -61,11 +61,25 @@ const team: {
     img: "./team/Chuy_Garcia.avif",
   },
 ];
+
+const Paragraph: React.FC<{
+  children: React.ReactNode;
+  className?: string;
+}> = ({ children, className }) => {
+  return (
+    <p
+      className={`font-poppins text-xl leading-10 text-gray-900 dark:text-gray-200 ${className}`}
+    >
+      {children}
+    </p>
+  );
+};
+
 const About: React.FC = () => {
   return (
     <motion.div
       id="about"
-      className="min-h-screen flex flex-col md:flex-row justify-around items-center p-10 bg-cover"
+      className="flex min-h-screen flex-col items-center justify-around bg-cover text-center  "
       style={{
         backgroundImage:
           'url("https://example.com/path-to-your-background-image.jpg")',
@@ -75,60 +89,81 @@ const About: React.FC = () => {
       transition={{ duration: 1 }}
     >
       <motion.div
-        className="w-full md:w-1/2 text-left space-y-4"
+        className=" my-10 md:mx-[10%]  lg:mb-32 lg:text-left"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          Advancing Decentralization
+        <h1 className="mb-10 text-3xl font-bold text-dappnodePurple">
+          Dappnode's mission
         </h1>
-        <p className="text-lg text-gray-900 dark:text-gray-200">
-          Dappnode’s mission is to advance the decentralization of the internet.
-          We seek a world composed of self-sovereign individuals, where freedom,
-          privacy, and censorship resistance are indisputable values of our
-          society.
-        </p>
-        <p className="text-lg text-gray-900 dark:text-gray-200">
-          In order to achieve this vision, we work hard to provide a
-          decentralized infrastructure layer accessible to everyone.
-        </p>
-        <p className="text-lg text-gray-900 dark:text-gray-200">
-          Our software is the medium but the people have the power, by running
-          their own nodes in their homes. Whatever network you want to power,
-          Dappnode is there to simplify your task and facilitate a world where
-          everyone can have their own gateway to web3.
-        </p>
-        <p className="text-lg text-gray-900 dark:text-gray-200">
-          That’s why we need YOU to participate in this movement.
-        </p>
+        <div className="flex flex-col px-5 lg:flex-row lg:gap-28 lg:px-0">
+          <div className="w-full space-y-12  leading-10 lg:w-1/2 ">
+            <Paragraph>
+              Our goal is to advance the decentralization of the internet. We
+              seek a world composed of self-sovereign individuals, where
+              freedom, privacy, and censorship resistance are indisputable
+              values of our society.
+            </Paragraph>
+            <Paragraph>
+              In order to achieve this vision, we work hard to provide a
+              decentralized infrastructure layer accessible to everyone.
+            </Paragraph>
+            <Paragraph>
+              Our software is the medium but the people have the power, by
+              running their own nodes in their homes. Whatever network you want
+              to power, Dappnode is there to simplify your task and facilitate a
+              world where everyone can have their own gateway to web3.
+            </Paragraph>{" "}
+            <Paragraph>
+              That’s why we need{" "}
+              <span className="font-bold text-dappnodePurple">YOU</span> to
+              participate in this movement.
+            </Paragraph>
+          </div>
+          <div className="my-10 flex w-full flex-col justify-center lg:w-1/2">
+            <img src="decentralization_dappnodes.png" alt="decentralization" />
+          </div>
+        </div>
       </motion.div>
+
       <motion.div
-        className="w-full md:w-1/2 grid grid-cols-4 gap-4"
+        className="w-full bg-dappnodePurple py-28"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.5 }}
       >
-        {team.map((member, index) => (
-          <div
-            key={member.name}
-            className={`flex flex-col items-center space-y-1 ${
-              index >= 11 ? "col-span-2" : ""
-            }`}
-          >
-            <img
-              src={member.img}
-              alt={member.name}
-              className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-full shadow-lg"
-            />
-            <h2 className="text-md font-semibold text-gray-900 dark:text-white">
-              {member.name}
-            </h2>
-            <p className="text-sm text-gray-800 dark:text-gray-400">
-              {member.role}
-            </p>
+        {" "}
+        <div className="md:mx-[10%]">
+          <h2 className="mb-20 text-3xl font-bold text-dappnodeDarkText">
+            Our team
+          </h2>
+          <div className="grid gap-20 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+            {" "}
+            {team.map((member, index) => (
+              <div
+                key={member.name}
+                className={`flex flex-col items-center space-y-1 ${
+                  index >= 11 ? "col-span-2" : ""
+                }`}
+              >
+                <div className="flex flex-col items-center text-center">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="h-40 w-40 rounded-full object-cover shadow-lg md:h-32 md:w-32"
+                  />
+                  <div className="mt-5">
+                    <p className="text-md font-semibold text-white">
+                      {member.name}
+                    </p>
+                    <p className=" text-sm text-gray-300">{member.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </motion.div>
     </motion.div>
   );

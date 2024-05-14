@@ -5,3 +5,12 @@
 html {
   scroll-behavior: smooth;
 }
+
+@layer base {
+  html {
+    font-family: "modeg", sans-serif;
+  }
+  p {
+    font-family: "poppins", sans-serif;
+  }
+}

@@ -42,7 +42,7 @@ const App: React.FC = () => {
   return (
     <div
       className={
-        "App min-h-screen flex flex-col bg-dappnodeBgLightLayout dark:bg-dappnodeBgDarkLayout"
+        "App flex min-h-screen flex-col bg-dappnodeBgLightLayout dark:bg-dappnodeBgDarkLayout"
       }
     >
       <Navbar theme={theme} onThemeToggle={toggleTheme} />
@@ -53,7 +53,7 @@ const App: React.FC = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-24 right-4 p-2 rounded-full bg-gray-300 hover:bg-gray-400 cursor-pointer text-white"
+          className="fixed bottom-24 right-4 cursor-pointer rounded-full bg-dappnodeYellow/50 p-2 text-white transition-colors duration-300 ease-in-out hover:bg-dappnodeYellow "
         >
           <FiArrowUp className="text-4xl" />
         </button>
