@@ -12,7 +12,7 @@ module.exports = {
         dappnodeYellow: "#FFB900",
         dappnodeOrange: "#FC9E22",
         dappnodePink: "#E60AF6",
-        dappnodePurple: "#5231C6",
+        dappnodePurple: "#9333ea",
         dappnodeNavy: "#002C41",
         dappnodeGrey1: "#DDDDDD",
         dappnodeGrey2: "#FC9E22",
@@ -27,6 +27,9 @@ module.exports = {
         dappnodeBgLightHeaderFooter: "#FFFFFF",
         dappnodeBgDarkLayout: "#121212",
         dappnodeBgLightLayout: "#F8F8F8",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },

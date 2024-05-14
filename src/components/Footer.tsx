@@ -29,10 +29,10 @@ const socials = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex h-36 flex-col items-center justify-center gap-y-4 border-t  bg-dappnodeBgLightHeaderFooter dark:bg-dappnodeBgDarkHeaderFooter sm:h-20 sm:flex-row sm:justify-between md:px-12">
-      <div className="flex flex-col items-center justify-between sm:flex-row">
+    <footer className=" flex flex-col items-center justify-center  gap-y-4 bg-gradient-to-t  from-dappnodePurple/30 via-dappnodePurple/15 via-20% py-10 dark:from-dappnodePurple/20  md:h-20 md:flex-row md:justify-between md:px-12">
+      <div className="flex flex-col items-center justify-between md:flex-row">
         {/* Link with logo and text */}
-        <div className="flex flex-col items-center gap-y-4 hover:underline sm:flex-row">
+        <div className="flex flex-col items-center gap-y-4 hover:underline md:flex-row">
           <a href={MAIN_SITE_URL} rel="noopener noreferrer" target="_blank">
             <img
               alt="Dappnode logo"
@@ -42,14 +42,15 @@ const Footer: React.FC = () => {
             />
           </a>
           <a href={MAIN_SITE_URL} rel="noopener noreferrer" target="_blank">
-            <h4 className="ml-4 mt-2 flex items-center justify-center text-sm sm:text-left text-gray-800 dark:text-gray-200">
+            <h4 className="ml-4 flex items-center justify-center text-sm text-gray-800 dark:text-gray-200 md:mt-2 md:text-left">
               Dappnode <FiExternalLink className="ml-1" />
             </h4>
           </a>
         </div>
         {/* Right side text */}
-        <h4 className="mt-2 text-center text-sm sm:mx-3 sm:text-left text-gray-800 dark:text-gray-200">
-          | Decentralized P2P Networking | © 2024
+        <h4 className="mt-2 text-center text-sm text-gray-800 dark:text-gray-200 md:mx-3 md:text-left">
+          <span className="hidden md:inline">| </span>Decentralized P2P
+          Networking | © 2024
         </h4>
       </div>
 
@@ -58,7 +59,7 @@ const Footer: React.FC = () => {
           <a
             key={index}
             href={social.path}
-            className="text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-300"
+            className="text-gray-800 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-300"
           >
             <social.Icon className="h-5 w-5 text-xl" />
           </a>
