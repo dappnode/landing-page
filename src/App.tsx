@@ -53,7 +53,7 @@ const App: React.FC = () => {
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-24 right-4 cursor-pointer rounded-full bg-dappnodeYellow/50 p-2 text-white transition-colors duration-300 ease-in-out hover:bg-dappnodeYellow "
+          className="fixed bottom-24 right-10 cursor-pointer rounded-full bg-purple-500 p-2 text-white transition-colors duration-300 ease-in-out hover:bg-purple-700 "
         >
           <FiArrowUp className="text-4xl" />
         </button>
