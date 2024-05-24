@@ -8,9 +8,20 @@ html {
 
 @layer base {
   html {
-    font-family: "modeg", sans-serif;
+    @apply font-modeg;
   }
+  h1 {
+    @apply text-4xl leading-[3rem] dark:text-dappnodeDarkText lg:text-5xl lg:leading-[4rem] xl:text-6xl xl:leading-[5rem];
+  }
+
+  h2 {
+    @apply text-3xl dark:text-dappnodeDarkText lg:text-5xl lg:leading-[4rem];
+  }
+  h3 {
+    @apply font-poppins text-lg font-bold text-dappnodePurple lg:text-2xl;
+  }
+
   p {
-    font-family: "poppins", sans-serif;
+    @apply font-poppins text-xl dark:text-dappnodeDarkText lg:text-2xl;
   }
 }

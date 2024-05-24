@@ -62,19 +62,6 @@ const team: {
   },
 ];
 
-const Paragraph: React.FC<{
-  children: React.ReactNode;
-  className?: string;
-}> = ({ children, className }) => {
-  return (
-    <p
-      className={`font-poppins text-xl leading-10 text-gray-900 dark:text-gray-200 ${className}`}
-    >
-      {children}
-    </p>
-  );
-};
-
 const About: React.FC = () => {
   return (
     <motion.div
@@ -89,37 +76,40 @@ const About: React.FC = () => {
       transition={{ duration: 1 }}
     >
       <motion.div
-        className=" my-10 md:mx-[10%]  lg:mb-32 lg:text-left"
+        className="px-5 lg:mb-32 lg:px-20 lg:text-left"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="mb-10 text-3xl font-bold text-dappnodePurple">
-          Dappnode's mission
-        </h1>
-        <div className="flex flex-col px-5 lg:flex-row lg:gap-28 lg:px-0">
-          <div className="w-full space-y-12  leading-10 lg:w-1/2 ">
-            <Paragraph>
+        <div className="flex flex-col gap-5 lg:gap-10 ">
+          <h3>About us</h3>
+          <h2>Dappnode's mission</h2>
+        </div>
+        <div className="flex flex-col lg:flex-row lg:gap-28 ">
+          <div className="flex w-full flex-col justify-center gap-10 leading-10 lg:w-1/2">
+            <p>
               Our goal is to advance the decentralization of the internet. We
               seek a world composed of self-sovereign individuals, where
               freedom, privacy, and censorship resistance are indisputable
               values of our society.
-            </Paragraph>
-            <Paragraph>
+            </p>
+            <p>
               In order to achieve this vision, we work hard to provide a
               decentralized infrastructure layer accessible to everyone.
-            </Paragraph>
-            <Paragraph>
+            </p>
+            <p>
               Our software is the medium but the people have the power, by
               running their own nodes in their homes. Whatever network you want
               to power, Dappnode is there to simplify your task and facilitate a
               world where everyone can have their own gateway to web3.
-            </Paragraph>{" "}
-            <Paragraph>
+            </p>{" "}
+            <p>
               That’s why we need{" "}
-              <span className="font-bold text-dappnodePurple">YOU</span> to
-              participate in this movement.
-            </Paragraph>
+              <span className="font-modeg font-bold text-dappnodePurple">
+                YOU
+              </span>{" "}
+              to participate in this movement.
+            </p>
           </div>
           <div className="my-10 flex w-full flex-col justify-center lg:w-1/2">
             <img src="decentralization_dappnodes.png" alt="decentralization" />
@@ -128,16 +118,14 @@ const About: React.FC = () => {
       </motion.div>
 
       <motion.div
-        className="w-full bg-dappnodePurple py-28"
+        className="w-full bg-dappnodePurple px-5 py-28 lg:px-20"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.5 }}
       >
         {" "}
-        <div className="md:mx-[10%]">
-          <h2 className="mb-20 text-3xl font-bold text-dappnodeDarkText">
-            Our team
-          </h2>
+        <div className="flex flex-col gap-20">
+          <h2 className="text-dappnodeDarkText">Our team</h2>
           <div className="grid gap-20 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
             {" "}
             {team.map((member, index) => (
