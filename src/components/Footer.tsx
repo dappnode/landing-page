@@ -29,7 +29,7 @@ const socials = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col items-center justify-center  gap-y-4 bg-dappnodePurple  md:h-20 md:flex-row md:justify-between md:px-12">
+    <footer className="flex flex-col items-center justify-center  gap-y-4  bg-purple-800 py-5 md:h-20 md:flex-row md:justify-between md:px-12 md:py-0">
       <div className="flex flex-col items-center justify-between md:flex-row">
         {/* Link with logo and text */}
         <div className="flex flex-col items-center gap-y-4 hover:underline md:flex-row">
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
           <a
             key={index}
             href={social.path}
-            className=" text-gray-200 hover:text-dappnodeDarkText"
+            className=" text-purple-200 hover:text-dappnodeDarkText"
           >
             <social.Icon className="h-5 w-5 text-xl" />
           </a>

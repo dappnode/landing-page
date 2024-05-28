@@ -46,14 +46,14 @@ const App: React.FC = () => {
       }
     >
       <Navbar theme={theme} onThemeToggle={toggleTheme} />
-      <main className="flex-grow">
+      <main className="flex flex-1 flex-col gap-24 lg:gap-36 xl:gap-52">
         <About />
       </main>
       <Footer />
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-24 right-10 cursor-pointer rounded-full bg-purple-500 p-2 text-white transition-colors duration-300 ease-in-out hover:bg-purple-700 "
+          className="fixed bottom-24 right-3 cursor-pointer rounded-full bg-purple-500 p-2 text-white transition-colors duration-300 ease-in-out hover:bg-purple-700 md:right-10"
         >
           <FiArrowUp className="text-4xl" />
         </button>

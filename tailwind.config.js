@@ -30,6 +30,7 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        modeg: ["modeg", "sans-serif"],
       },
     },
   },

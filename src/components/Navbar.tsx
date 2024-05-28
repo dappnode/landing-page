@@ -85,7 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, theme }) => {
         <div className="flex items-center">
           <button
             onClick={onThemeToggle}
-            className="hidden rounded-full p-2 text-xl text-gray-600 transition-all ease-in-out hover:bg-dappnodeBgLight dark:text-gray-300 dark:hover:bg-black lg:inline-block"
+            className="hidden rounded-full p-2 text-xl text-gray-600 transition-all ease-in-out hover:bg-purple-300 dark:text-gray-300 dark:hover:bg-purple-950 lg:inline-block"
           >
             {theme === "light" ? <FaMoon /> : <MdSunny />}
           </button>
@@ -104,7 +104,7 @@ const Navbar: React.FC<NavbarProps> = ({ onThemeToggle, theme }) => {
             ))}
             <button
               onClick={onThemeToggle}
-              className="rounded-full p-2 text-xl text-gray-600 transition-all ease-in-out hover:bg-dappnodeBgLight dark:text-gray-300 dark:hover:bg-black"
+              className="rounded-full p-2 text-xl text-gray-600 transition-all ease-in-out hover:bg-purple-200 dark:text-gray-300 dark:hover:bg-purple-950"
             >
               {theme === "light" ? <FaMoon /> : <MdSunny />}
             </button>
