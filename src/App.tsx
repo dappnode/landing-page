@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { FiArrowUp } from "react-icons/fi";
-import About from "./components/About";
 import "./App.css";
 
 const App: React.FC = () => {
@@ -46,9 +45,7 @@ const App: React.FC = () => {
       }
     >
       <Navbar theme={theme} onThemeToggle={toggleTheme} />
-      <main className="flex flex-1 flex-col gap-24 lg:gap-36 xl:gap-52">
-        <About />
-      </main>
+      <main className="flex flex-1 flex-col gap-24 lg:gap-36 xl:gap-52"></main>
       <Footer />
       {showScrollTop && (
         <button
