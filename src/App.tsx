@@ -8,6 +8,8 @@ const App: React.FC = () => {
   const [theme, setTheme] = useState("light");
   const [showScrollTop, setShowScrollTop] = useState(false);
 
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
   // Toggle theme function simplified
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
@@ -40,11 +42,14 @@ const App: React.FC = () => {
 
   return (
     <div
-      className={
-        "App flex min-h-screen flex-col bg-dappnodeBgLightLayout dark:bg-dappnodeBgDarkLayout"
-      }
+      className={`flex min-h-screen flex-col bg-dappnodeBgLightLayout dark:bg-dappnodeBgDark ${isMobileNavOpen && "h-screen overflow-y-clip"} `}
     >
-      <Navbar theme={theme} onThemeToggle={toggleTheme} />
+      <Navbar
+        theme={theme}
+        onThemeToggle={toggleTheme}
+        isMobileNavOpen={isMobileNavOpen}
+        setIsMobileNavOpen={setIsMobileNavOpen}
+      />
       <main className="flex flex-1 flex-col gap-24 lg:gap-36 xl:gap-52"></main>
       <Footer />
       {showScrollTop && (
